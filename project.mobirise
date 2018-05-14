@@ -1,0 +1,284 @@
+{
+  "settings": {
+    "name": "Site-05-11_1057",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "soundamp",
+      "title": "SoundAMP",
+      "styling": {
+        "primaryColor": "#78BBFB",
+        "secondaryColor": "#CCE6FE",
+        "successColor": "#BFA3F0",
+        "infoColor": "#3977AA",
+        "warningColor": "#f94176",
+        "dangerColor": "#501e89",
+        "mainFont": "Montserrat",
+        "display1Font": "Pangolin",
+        "display1Size": 6,
+        "display2Font": "Pangolin",
+        "display2Size": 4.2,
+        "display5Font": "Pangolin",
+        "display5Size": 2,
+        "display6Font": "Montserrat",
+        "display6Size": 1.2,
+        "display7Font": "Montserrat",
+        "display7Size": 1,
+        "display4Font": "Montserrat",
+        "display4Size": 0.8,
+        "isRoundedButtons": true
+      },
+      "additionalSetColors": []
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "4.7.0",
+    "uniqCompNum": 17,
+    "versionPublish": "4.7.3",
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "Home",
+        "meta_descr": "",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".mbr-section-title, .mbr-section-subtitle, .mbr-text": {
+              "margin-bottom": "1rem"
+            },
+            ".mbr-section-btn": {
+              "margin-top": "2rem"
+            }
+          },
+          "_name": "header1",
+          "_customHTML": "<section class=\"header1\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\" checked>\n\t\n\t<input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"20\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n\t<input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"20\" step=\"1\" value=\"10\" condition=\"fullScreen == false\">\n\n\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n\t<input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked>\n\t<input type=\"checkbox\" title=\"Show Text\" name=\"showText\">\n\t<input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked>\n\n\t<fieldset type=\"background\" name=\"bg\">\n\t\t<input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" selected>\n\t\t<input type=\"color\" title=\"Background Color\" value=\"#0dd1ff\">\n\t</fieldset>\n\n\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked>\n\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' && overlay\">\n\t<input type=\"range\" inline title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"bg.type!='color' && overlay\">\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\"></div>\n\t\n\t<div class=\"container\">\n\t\t<h1 class=\"mbr-section-title mbr-fonts-style align-center mbr-bold mbr-white\" mbr-theme-style=\"display-1\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n\t\tSoundAMP\n\t\t</h1>\n\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style align-center mbr-white mbr-light\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubTitle\">\n\t\tAccelerate your site with AMP\n\t\t</h3>\n\t\t<p class=\"mbr-fonts-style mbr-text mbr-white align-center\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">\n\t\t\tFull width intro with adjustable height, background image. Click any text to edit or style it.\n\t\t</p>\n\t\t<div class=\"mbr-section-btn align-center\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-4\"><a class=\"btn btn-md btn-primary\" href=\"https://mobirise.com\">\n\t\t\t\tLEARN MORE\n\t\t\t</a></div>\n\t</div>\n</section>",
+          "_cid": "qRIZeOsGsD",
+          "_anchor": "header1-2",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 15px)",
+              "padding-bottom": "(@paddingBottom * 15px)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".image": {
+              "height": "(@picMinHeight * 1px)",
+              "position": "relative",
+              "@media (max-width: 992px)": {
+                "width": "100%"
+              },
+              ".text-block": {
+                "display": "flex",
+                "flex-direction": "column",
+                "justify-content": "center",
+                "pointer-events": "none",
+                "position": "absolute",
+                "top": "0",
+                "left": "50%",
+                "right": "0",
+                "bottom": "0",
+                "& when (@textPosition)": {
+                  "left": "0"
+                },
+                "padding": "2rem",
+                "z-index": "2",
+                "> *": {
+                  "margin-bottom": "1rem",
+                  "z-index": "1",
+                  "pointer-events": "all"
+                },
+                "@media (max-width: 992px)": {
+                  "left": "0",
+                  "padding": "1rem",
+                  "height": "100%",
+                  "justify-content": "center"
+                }
+              }
+            },
+            "amp-img": {
+              "height": "100%",
+              "&:before": {
+                "pointer-events": "none",
+                "content": "''",
+                "position": "absolute",
+                "left": "0",
+                "top": "0",
+                "width": "100%",
+                "height": "100%",
+                "background-color": "@picColor",
+                "opacity": "@picOpacity",
+                "transition": "0.5s opacity ease-in-out",
+                "z-index": "1"
+              },
+              "& when not (@picOverlay)": {
+                "&:before": {
+                  "display": "none"
+                }
+              }
+            },
+            "img": {
+              "height": "100%",
+              "object-fit": "cover"
+            }
+          },
+          "_name": "header3",
+          "_customHTML": "<section class=\"header3\" group=\"Headers\" plugins=\"amp-main\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t<input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n\t<input type=\"range\" inline=\"\" title=\"Image Height\" name=\"picMinHeight\" min=\"200\" max=\"1200\" step=\"50\" value=\"500\">\n\n\t<input type=\"checkbox\" title=\"Text On Left/Right\" name=\"textPosition\">\n\n\t<input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\t<input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"6\" condition=\"fullScreen == false\">\n\n\t<input type=\"checkbox\" title=\"Image Overlay\" name=\"picOverlay\" checked=\"\">\n\t<input type=\"color\" title=\"Image Overlay Color\" name=\"picColor\" value=\"#444444\" condition=\"picOverlay\">\n\t<input type=\"range\" inline=\"\" title=\"Image Overlay Opacity\" name=\"picOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"picOverlay\">\n\n\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubTitle\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\" checked=\"\">\n\n\t<fieldset type=\"background\" name=\"bg\">\n\t\t<input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\" selected=\"\">\n\t\t<input type=\"color\" title=\"Background Color\" value=\"#000000\">\n\t</fieldset>\n\n\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked=\"\">\n\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#000000\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n\t<input type=\"range\" inline=\"\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.7\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n\t\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\"></div>\n\t<div class=\"container\">\n\t\t<div class=\"image\">\n\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/background4.jpg\" layout=\"responsive\" width=\"749.4145199063232\" height=\"500\" alt=\"Mobirise\">\n\t\t\t\t<div class=\"text-block\">\n\t\t\t\t\t<h3 class=\"mbr-section-subtitle mbr-fonts-style align-left mbr-white mbr-light\" mbr-theme-style=\"display-5\" data-app-selector=\".mbr-section-subtitle\" mbr-if=\"showSubTitle\">\n\t\t\t\t\tEvent Header\n\t\t\t\t\t</h3>\n\t\t\t\t\t<h1 class=\"mbr-section-title mbr-fonts-style align-left mbr-bold mbr-white\" mbr-theme-style=\"display-2\" data-app-selector=\".mbr-section-title\" mbr-if=\"showTitle\">\n\t\t\t\t\tSoundAMP\n\t\t\t\t\t</h1>\n\t\t\t\t\t<p class=\"mbr-fonts-style mbr-text mbr-white align-left\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text, .mbr-section-btn\" mbr-if=\"showText\">\n\t\t\t\t\t\tFull width intro with adjustable height, image with text block and background image. Click any text to edit or style it.\n\t\t\t\t\t</p>\n\t\t\t\t\t<div class=\"mbr-section-btn align-left\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons=\"\" mbr-theme-style=\"display-4\">\n\t\t\t\t\t\t<a class=\"btn btn-sm btn-primary\" href=\"https://mobirise.com\">\n\t\t\t\t\t\t\tLEARN MORE\n\t\t\t\t\t\t</a>\n\t\t\t\t\t</div>\n\t\t\t\t</div>\n\t\t\t\t<img class=\"mbr-temp\" src=\"@PROJECT_PATH@/assets/images/background4.jpg\" alt=\"Mobirise\">\n\t\t\t</amp-img>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "qRIZU5qSSm",
+          "_anchor": "header3-4",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".mbr-row": {
+              "margin": "0"
+            },
+            "& when not (@showTitle)": {
+              ".image": {
+                "padding-bottom": "1rem"
+              }
+            },
+            ".card": {
+              "position": "relative",
+              "padding": "0",
+              "@media (max-width: 992px)": {
+                "padding": "1rem"
+              },
+              "&:hover": {
+                "amp-img img": {
+                  "transform": "scale(1.2)"
+                }
+              }
+            },
+            ".image": {
+              "overflow": "hidden",
+              "height": "100%",
+              "max-height": "850px"
+            },
+            "amp-img": {
+              "height": "100%",
+              "min-height": "(@picMinHeight * 1px)",
+              "img": {
+                "transition": "0.5s",
+                "height": "100%",
+                "object-fit": "cover"
+              }
+            },
+            ".text-block": {
+              "position": "absolute",
+              "left": "2rem",
+              "right": "2rem",
+              "bottom": "2rem",
+              "padding": "1rem",
+              "@media (max-width: 662px)": {
+                "left": "1rem",
+                "right": "1rem",
+                "bottom": "1rem",
+                "padding": "0.5rem"
+              },
+              "background-color": "@txtBlockColor",
+              "> *": {
+                "padding": "0",
+                "margin": "0"
+              },
+              ".mbr-section-subtitle, .mbr-section-title": {
+                "margin-bottom": "0.8rem"
+              },
+              "& when not (@showDate)": {
+                ".mbr-section-title": {
+                  "margin-bottom": "0"
+                }
+              }
+            }
+          },
+          "_name": "news1",
+          "_customHTML": "<section class=\"news1 mbr-section\" group=\"News\" plugins=\"amp-main\">\n\t<mbr-parameters>\n\t<!-- Block parameters controls (Blue \"Gear\" panel) -->\n\t<input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n\t<input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"9\" step=\"1\" value=\"0\">\n\n\t<input type=\"range\" inline=\"\" title=\"Image Height\" name=\"picMinHeight\" min=\"300\" max=\"1000\" step=\"50\" value=\"600\">\n\n\t<input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Subtitle\" name=\"showSubtitle\" checked=\"\">\n\t<input type=\"checkbox\" title=\"Show Date\" name=\"showDate\" checked=\"\">\n\n\t<input type=\"color\" title=\"Text Block BG Color\" name=\"txtBlockColor\" value=\"#ffffff\" selected=\"\">\n\n\t<select title=\"Cards\" name=\"cardsAmount\">\n\t\t<option value=\"1\">1</option>\n\t\t<option value=\"2\">2</option>\n\t\t<option value=\"3\">3</option>\n\t\t<option value=\"4\" selected=\"\">4</option>\n\t</select>\n\n\t<fieldset type=\"background\" name=\"bg\">\n\t\t<input type=\"image\" title=\"Background Image\" value=\"../_images/background3.jpg\">\n\t\t<input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n\t</fieldset>\n\t<input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type!='color'\" checked=\"\">\n\t<input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n\t<input type=\"range\" inline=\"\" title=\"Overlay Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.5\" condition=\"bg.type!='color' &amp;&amp; overlay\">\n\t<!-- End block parameters -->\n\t</mbr-parameters>\n\t<div class=\"mbr-overlay\" mbr-if=\"overlay &amp;&amp; bg.type !== 'color'\"></div>\n\t<div class=\"mbr-row mbr-justify-content-center\">\n\t\t<div class=\"card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\">\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/background1.jpg\" alt=\"image\" height=\"600\" width=\"900\" layout=\"responsive\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/background1.jpg\" class=\"mbr-temp\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t\t<div class=\"text-block align-left\">\n\t\t\t\t<h4 class=\"mbr-section-subtitle mbr-light mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\tIn hac.\n\t\t\t\t</h4>\n\t\t\t\t<h3 class=\"mbr-section-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tUt eu leo eu velit.\n\t\t\t\t</h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text date\" mbr-theme-style=\"display-4\" mbr-if=\"showDate\" data-app-selector=\".date\">\n\t\t\t\t\t10/04/2018\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>1\">\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/background2.jpg\" alt=\"image\" height=\"600\" width=\"906.372934697089\" layout=\"responsive\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/background2.jpg\" class=\"mbr-temp\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t\t<div class=\"text-block align-left\">\n\t\t\t\t<h4 class=\"mbr-section-subtitle mbr-light mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\tVestibulum massa.\n\t\t\t\t</h4>\n\t\t\t\t<h3 class=\"mbr-section-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tVivamus maximus condimentum velit et.\n\t\t\t\t</h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text date\" mbr-theme-style=\"display-4\" mbr-if=\"showDate\" data-app-selector=\".date\">\n\t\t\t\t\t10/04/2018\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>2\">\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/background3.jpg\" alt=\"image\" height=\"600\" width=\"900.2197802197802\" layout=\"responsive\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/background3.jpg\" class=\"mbr-temp\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t\t<div class=\"text-block align-left\">\n\t\t\t\t<h4 class=\"mbr-section-subtitle mbr-light mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\tNam pellentesque.\n\t\t\t\t</h4>\n\t\t\t\t<h3 class=\"mbr-section-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\t\tMorbi massa orci, tempus vel.\n\t\t\t\t</h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text date\" mbr-theme-style=\"display-4\" mbr-if=\"showDate\" data-app-selector=\".date\">\n\t\t\t\t\t10/04/2018\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t\t<div class=\"card mbr-col-sm-12 mbr-col-md-6 mbr-col-lg-3\" mbr-if=\"cardsAmount>3\">\n\t\t\t<div class=\"image\">\n\t\t\t\t<amp-img src=\"@PROJECT_PATH@/assets/images/background4.jpg\" alt=\"image\" height=\"600\" width=\"899.2974238875879\" layout=\"responsive\">\n\t\t\t\t\t<div placeholder=\"\">\n\t\t\t\t\t\t<div class=\"mobirise-spinner\">\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t\t<em></em>\n\t\t\t\t\t\t</div>\n\t\t\t\t\t</div>\n\t\t\t\t\t<img src=\"@PROJECT_PATH@/assets/images/background4.jpg\" class=\"mbr-temp\">\n\t\t\t\t</amp-img>\n\t\t\t</div>\n\t\t\t<div class=\"text-block align-left\">\n\t\t\t\t<h4 class=\"mbr-section-subtitle mbr-text mbr-light mbr-fonts-style\" mbr-theme-style=\"display-4\" mbr-if=\"showTitle\" data-app-selector=\".mbr-section-subtitle\">\n\t\t\t\tDuis eleifend.\n\t\t\t\t</h4>\n\t\t\t\t<h3 class=\"mbr-section-title mbr-bold mbr-fonts-style\" mbr-theme-style=\"display-5\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-title\">\n\t\t\t\tMaecenas lacinia tincidunt ligula, sit.\n\t\t\t\t</h3>\n\t\t\t\t<p class=\"mbr-fonts-style mbr-text date\" mbr-theme-style=\"display-4\" mbr-if=\"showDate\" data-app-selector=\".date\">\n\t\t\t\t\t10/04/2018\n\t\t\t\t</p>\n\t\t\t</div>\n\t\t</div>\n\t</div>\n</section>",
+          "_cid": "qRIZUNPFBQ",
+          "_anchor": "news1-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".container, .inst-feed, amp-iframe": {
+              "height": "500px",
+              "width": "100%"
+            },
+            ".show-more": {
+              "height": "50px",
+              "width": "100px",
+              "background-color": "red"
+            }
+          },
+          "_name": "inst",
+          "_customHTML": "<section class=\"instagram\" group=\"Instagram\" plugins=\"amp-main, amp-iframe\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n    <input type=\"range\" inline=\"\" title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <input type=\"range\" inline=\"\" title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"8\" step=\"1\" value=\"4\">\n    <fieldset type=\"background\" name=\"bg\">\n        <input type=\"image\" title=\"Background Image\" value=\"../_images/backgrounds/background1.jpg\">\n        <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected=\"\">\n    </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n    <amp-iframe width=\"300\" height=\"300\" layout=\"responsive\" resizable=\"\" frameborder=\"0\"\n                sandbox=\"allow-top-navigation allow-same-origin allow-scripts allow-forms allow-pointer-lock allow-popups\" \n                src=\"https://overbrain42.github.io/overgit2/\">\n        <div overflow\n             class=\"amp-visible\"\n        tabindex=\"0\"\n        role=\"button\"\n        class=\"ampstart-card py1\"\n        aria-label=\"Show more\">Click to show more</div>\n    </amp-iframe>\n</section>",
+          "_cid": "qRKzmJsLwq",
+          "_anchor": "inst-g",
+          "_PHPplaceholders": [],
+          "_JSplaceholders": [],
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
